@@ -8,3 +8,4 @@ RUN PATH="${HOME}/.cargo/bin:${PATH}" make all && \
 
 FROM scratch AS dist
 COPY --from=build /v86/build /
+COPY --from=build /v86/bios /bios
